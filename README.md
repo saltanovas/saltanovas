@@ -2,7 +2,7 @@
 - 🔭 My recent project is <a href="https://github.com/PSISmartSaver/SmartSaver">SmartSaver</a>
 - 🌱 I’m currently learning everything 🤣
 - 🥅 2021 Goals: Find a job 👨🏻‍💻
-- ⚡ Fun fact: Terry Davis was the smartest programmer who ever lived 👽😵
+- ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵
 
 | 🎧 Currently Listening                                                                                                                                               | :zap: GitHub Stats															    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------------------|
