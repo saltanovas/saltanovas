@@ -1,8 +1,8 @@
-## Aloha, I'm Aivaras & I 💛 code.
+## Aloha, I'm Aivaras & I 💛 code. <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
 - 🔭 My recent project is <a href="https://github.com/PSISmartSaver/SmartSaver">SmartSaver</a>
 - 🌱 I’m currently learning everything 🤣
-- 🥅 2021 Goals: Find a job 👨🏻‍💻
-- ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵 <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
+- 🥅 2021 Goals: Find a job 👨🏻‍💻 
+- ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵
 
 
 | 🎧 Currently Listening                                                                                                                                               | :zap: GitHub Stats															    |
