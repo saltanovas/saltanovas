@@ -36,7 +36,7 @@
 <p align="center">
   <i>Take a look at my repositories and let's get in touch!</i>
 <p align="center">
-  <a href="https://www.facebook.com/LabasJeiSkaitaiTaiAsTaveMyliu/"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104142259-8335c780-53c3-11eb-9f7d-111597ea9751.png" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.facebook.com/LabasJeiSkaitaiTaiAsTaveMyliu/"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104142259-8335c780-53c3-11eb-9f7d-111597ea9751.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/aivaras-%C5%A1altanovas-b813371a3/"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140654-2a623100-53bb-11eb-81b6-eafe97a165d6.png" /></a> &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="mailto:zumbass@gmail.com"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140653-29c99a80-53bb-11eb-8fe8-3ad2a0d4fe14.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="mailto:aivaras.saltanovas@mif.stud.vu.lt"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140671-3bab3d80-53bb-11eb-97a2-fc1a0f5f3f39.png" /></a> &nbsp;&nbsp;&nbsp;&nbsp;
