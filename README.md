@@ -1,6 +1,6 @@
 ## Aloha, I'm Aivaras & I 💛 code. <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
 - 🔭 My recent project is <a href="https://github.com/PSISmartSaver/SmartSaver">SmartSaver</a>
-- 🌱 I’m currently learning React <img align="bottom" height="22" width="22" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
+- 🌱 I’m currently learning React <img align="top" height="22" width="22" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
 - 🥅 2021 Goals: Find a job 👨🏻‍💻 
 - ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵
 
