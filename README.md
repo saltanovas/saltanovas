@@ -27,9 +27,9 @@
 <img alt="Java" height="34" width="20" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/800px-Java_programming_language_logo.svg.png" />&nbsp;&nbsp;&nbsp;
 <img alt="C" height="36" width="36" src="https://github.com/RaghavK16/RaghavK16/raw/master/images/c-original.svg" />&nbsp;&nbsp;&nbsp;
 <img alt="C#" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/csharp/csharp.png" />&nbsp;&nbsp;&nbsp;
-<img alt=".NET" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_.NET_logo.png" />&nbsp;&nbsp;&nbsp;
+<img alt=".NET" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_.NET_logo.png" />&nbsp;&nbsp;
 <img alt="Haskell" height="36" width="36" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/haskell/haskell.png" />&nbsp;&nbsp;
-<img alt="SQL" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />&nbsp;&nbsp;&nbsp;
+<img alt="SQL" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />&nbsp;&nbsp;
 <img alt="PostgreSQL" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png" />&nbsp;&nbsp;&nbsp;
 <img alt="Git" height="36" width="36" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />&nbsp;&nbsp;&nbsp;
 <img alt="GitHub" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />&nbsp;&nbsp;&nbsp;
