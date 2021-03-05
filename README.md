@@ -18,7 +18,7 @@
 <p align="center">
   <i>
     Skill Set 
-    <img align='top' height="28" width="28" src="https://user-images.githubusercontent.com/65735690/110167860-06413000-7dff-11eb-80e3-6c0789a7e1e3.gif" >
+    <img align='top' height="24" width="24" src="https://user-images.githubusercontent.com/65735690/110167860-06413000-7dff-11eb-80e3-6c0789a7e1e3.gif" >
   </i>
 <p align="center">
 <img alt="Visual Studio Code" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />&nbsp;&nbsp;&nbsp;
