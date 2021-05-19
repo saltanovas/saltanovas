@@ -26,7 +26,7 @@
 <img alt="CSS3" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />&nbsp;&nbsp;&nbsp;
 <img alt="Bootstrap" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" />&nbsp;&nbsp;&nbsp;
 <img alt="JavaScript" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />&nbsp;&nbsp;&nbsp;
-<img alt="IntelliJ" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/IntelliJ_IDEA_Logo.svg" />&nbsp;&nbsp;&nbsp;
+<img alt="IntelliJ" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/512px-IntelliJ_IDEA_Icon.svg.png" />&nbsp;&nbsp;&nbsp;
 <img alt="Java" height="34" width="20" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/800px-Java_programming_language_logo.svg.png" />&nbsp;&nbsp;&nbsp;
 <img alt="C" height="36" width="36" src="https://github.com/RaghavK16/RaghavK16/raw/master/images/c-original.svg" />&nbsp;&nbsp;&nbsp;
 <img alt="C#" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/csharp/csharp.png" />&nbsp;&nbsp;&nbsp;
@@ -36,7 +36,9 @@
 <img alt="PostgreSQL" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png" />&nbsp;&nbsp;&nbsp;
 <img alt="Git" height="36" width="36" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />&nbsp;&nbsp;&nbsp;
 <img alt="GitHub" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />&nbsp;&nbsp;&nbsp;
-<img alt="GitLab" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1200px-GitLab_Logo.svg.png" />&nbsp;&nbsp;&nbsp;
+<img alt="GitLab" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1200px-GitLab_Logo.svg.png" />&nbsp;&nbsp;
+<img alt="PHP", height="34" width="34" src="https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png" />&nbsp;&nbsp;
+<img alt="Symfony", height="32" width="32" src="https://raw.githubusercontent.com/github/explore/d0c5a5e31e1776ad62379ef5f6b703bcf107d3a3/topics/symfony/symfony.png" />&nbsp;&nbsp;&nbsp;
 </p>
 </p>
 
