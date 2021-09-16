@@ -38,7 +38,6 @@
 <img alt="Git" height="36" width="36" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />&nbsp;&nbsp;
 <img alt="PHP", height="36" width="32" src="https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png" />&nbsp;&nbsp;
 <img alt="Symfony", height="34" width="34" src="https://raw.githubusercontent.com/github/explore/d0c5a5e31e1776ad62379ef5f6b703bcf107d3a3/topics/symfony/symfony.png" />&nbsp;&nbsp;
-<img alt="Atlassian", height="32" width="32" src="https://avatars.githubusercontent.com/u/168166?s=200&v=4" />&nbsp;&nbsp;
 <img alt="Postman", height="34" width="34" src="https://user-images.githubusercontent.com/65735690/133661697-6b2e64f0-27e7-4a65-8e73-4730cc24c2ad.png" />&nbsp;&nbsp;&nbsp;
 </p>
 </p>
