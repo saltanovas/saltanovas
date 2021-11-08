@@ -1,7 +1,7 @@
 ## Aloha, I'm Aivaras & I 💛 code. <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
 - 🔭 My recent project is <a href="https://github.com/PSISmartSaver/SmartSaver">SmartSaver</a>
 - 🌱 I’m currently learning software engineer at <a href="https://mif.vu.lt/lt3/en/">VU MIF</a>
-- 👨🏻‍💻 I'm currently working at <a href="https://kevin.eu">kevin.</a>
+- 👨🏻‍💻 Junior Kotlin developer at <a href="https://kevin.eu">kevin.</a>
 - ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵
 
 
