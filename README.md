@@ -7,7 +7,7 @@
 
 | 🎧 Currently Listening                                                                                                                                               | :zap: GitHub Stats															    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------------------|
-| [<img src="https://spotify-now-playing-fawn-ten.vercel.app//api/spotify-playing" alt="Spotify Now Playing" width="350" />](https://open.spotify.com/user/1176596437) |<img align="right" alt="" src="https://github-readme-stats-xi-black.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&title_color=5551FF&icon_color=5551FF" /> |
+| [<img src="https://spotify-now-playing-fawn-ten.vercel.app//api/spotify-playing" alt="Spotify Now Playing" width="350" />](https://open.spotify.com/user/1176596437) |<img align="right" alt="" src="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&title_color=5551FF&icon_color=5551FF" /> |
 
 <hr>
 <p align="center">
