@@ -10,11 +10,13 @@
 | [<img src="https://spotify-now-playing-fawn-ten.vercel.app//api/spotify-playing" alt="Spotify Now Playing" width="350" />](https://open.spotify.com/user/1176596437) |<img align="right" alt="" src="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&title_color=5551FF&icon_color=5551FF" /> |
 
 <hr>
+
 <p align="center">
   <i>Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live <br> - John F. Woods, September 1991</i>
 </p>
 
 <hr>
+
 <p align="center">
   <i>
     Skill Set 
@@ -43,6 +45,7 @@
 </p>
 
 <hr>
+
 <p align="center">
   <i>Take a look at my repositories and let's get in touch!</i>
 <p align="center">
@@ -51,4 +54,5 @@
   <a href="mailto:aivaras.saltanovas@mif.stud.vu.lt"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140671-3bab3d80-53bb-11eb-97a2-fc1a0f5f3f39.png" /></a> &nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 </p>
+
 <hr>
