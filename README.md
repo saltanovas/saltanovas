@@ -1,4 +1,4 @@
-## Aloha, I'm Aivaras & I 💛 code. <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='150"'>
+## Aloha, I'm Aivaras & I 💛 code. <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width="300">
 - 🔭 My recent project is <a href="https://github.com/PSISmartSaver/SmartSaver">SmartSaver</a>
 - 🌱 I’m currently learning software engineer at <a href="https://mif.vu.lt/lt3/en/">VU MIF</a>
 - 👨🏻‍💻 Junior Kotlin developer at <a href="https://kevin.eu">kevin.</a>
