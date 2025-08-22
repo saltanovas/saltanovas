@@ -27,7 +27,7 @@
   }$$
 </h3>
 <p align="center">
-  <img height="400" width="400" src="https://skillicons.dev/icons?theme=light&i=java,kotlin,spring,ktor,go,mysql,postgres,aws,docker" />
+  <img height="420" width="420" src="https://skillicons.dev/icons?theme=light&i=java,kotlin,spring,ktor,go,mysql,postgres,aws,docker" />
 </p>
 
 <hr>
