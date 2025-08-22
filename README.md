@@ -1,6 +1,5 @@
 ## Aloha, I'm Aivaras & I 💛 code. <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width="200">
-- 👨🏻‍💻 Software Engineer at <a href="https://www.kevin.eu">kevin.</a>
-- :v: 3.5 years of experience in financial services
+- 🏦 4 years of experience in financial services
 - 🌱 Recently switched to Golang after a solid 3 years background in Kotlin & Java
 - ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵
 
@@ -28,14 +27,10 @@
 <img alt="SpringBoot" height="34" width="34" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/spring-boot/spring-boot.png" />&nbsp
 <img alt="Ktor" height="34" width="34" src="https://avatars.githubusercontent.com/u/28214161?s=48&v=4" />&nbsp;
 <img alt="Go" height="30" width="32" src="https://miro.medium.com/v2/resize:fit:1000/0*YISbBYJg5hkJGcQd.png" />
-<img alt="PHP", height="36" width="32" src="https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png" />&nbsp;
-<img alt="Symfony", height="32" width="34" src="https://raw.githubusercontent.com/github/explore/d0c5a5e31e1776ad62379ef5f6b703bcf107d3a3/topics/symfony/symfony.png" />
-<img alt="C" height="36" width="36" src="https://github.com/RaghavK16/RaghavK16/raw/master/images/c-original.svg" />&nbsp;
-<img alt="MySQL" height="32" width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/200px-MySQL_logo.svg.png"/>&nbsp;&nbsp;&nbsp;
-<img alt="PostgreSQL" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png" />&nbsp;
-<img alt="CockroachDB" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/en/3/31/Cockroach_Labs_Logo.png"/>&nbsp;
-<img alt="Postman" height="34" width="34" src="https://user-images.githubusercontent.com/65735690/133661697-6b2e64f0-27e7-4a65-8e73-4730cc24c2ad.png" />&nbsp;
-<img alt="Docker" height="32" width="34" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/docker-icon.png" />&nbsp;&nbsp;&nbsp;
+<img alt="MySQL" height="32" width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/200px-MySQL_logo.svg.png"/>&nbsp;&nbsp;
+<img alt="PostgreSQL" height="32" width="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png" />
+<img alt="CockroachDB" height="32" width="32" src="https://upload.wikimedia.org/wikipedia/en/3/31/Cockroach_Labs_Logo.png"/>
+<img alt="Docker" height="32" width="34" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/docker-icon.png" />&nbsp;
 </p>
 </p>
 
@@ -44,9 +39,8 @@
 <p align="center">
   <i>Take a look at my repositories and let's get in touch!</i>
 <p align="center">
-  <a href="https://www.linkedin.com/in/aivaras-%C5%A1altanovas-b813371a3/"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140654-2a623100-53bb-11eb-81b6-eafe97a165d6.png" /></a> &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="mailto:zumbass@gmail.com"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140653-29c99a80-53bb-11eb-8fe8-3ad2a0d4fe14.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="mailto:aivaras.saltanovas@mif.stud.vu.lt"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140671-3bab3d80-53bb-11eb-97a2-fc1a0f5f3f39.png" /></a> &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/aivaras-%C5%A1altanovas-b813371a3/"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140654-2a623100-53bb-11eb-81b6-eafe97a165d6.png" /></a> &nbsp;
+  <a href="mailto:zumbass@gmail.com"><img height="36" width="36" src="https://user-images.githubusercontent.com/65735690/104140653-29c99a80-53bb-11eb-8fe8-3ad2a0d4fe14.png" /></a>&nbsp;
 </p>
 </p>
 
