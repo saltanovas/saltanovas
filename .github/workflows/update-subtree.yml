@@ -28,7 +28,7 @@ jobs:
 
           git subtree pull \
             --prefix=spotify-readme \
-            https://github.com/novatorem/spotify-readme.git \
+            https://github.com/novatorem/novatorem.git \
             master --squash
 
       - name: Create PR for subtree updates
