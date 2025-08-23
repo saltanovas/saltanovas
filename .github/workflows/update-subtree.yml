@@ -1,10 +1,10 @@
-name: Sync Git Subtrees
+name: Sync Subtrees
 
 on:
   workflow_dispatch:
 
 jobs:
-  update-subtree:
+  sync-subtree:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -31,7 +31,7 @@ jobs:
             https://github.com/novatorem/spotify-readme.git \
             master --squash
 
-      - name: Create PR if changes exist
+      - name: Create PR for subtree updates
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -40,7 +40,7 @@ jobs:
           git checkout -B $BRANCH_NAME
 
           # Check if the subtree pull made any changes
-          if git diff --quiet HEAD~1; then
+          if git diff --quiet && git diff --cached --quiet; then
             echo "No actual changes from subtree pull."
             exit 0
           fi
