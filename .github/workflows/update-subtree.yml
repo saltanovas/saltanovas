@@ -14,6 +14,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Pull subtree updates
         run: |
           git subtree pull \
@@ -47,9 +52,6 @@ jobs:
           if gh pr view $BRANCH_NAME --json number >/dev/null 2>&1; then
             echo "PR already exists for branch $BRANCH_NAME. Just pushed new changes."
           else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
             gh pr create \
               --base main \
               --head $BRANCH_NAME \
