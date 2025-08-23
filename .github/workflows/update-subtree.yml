@@ -1,0 +1,58 @@
+name: Update github-readme-stats subtree
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-subtree:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull subtree updates
+        run: |
+          git subtree pull \
+            --prefix=github-readme-stats \
+            https://github.com/anuraghazra/github-readme-stats.git \
+            master --squash
+
+          git subtree pull \
+            --prefix=spotify-readme \
+            https://github.com/novatorem/spotify-readme.git \
+            master --squash
+
+      - name: Create PR if changes exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH_NAME=update-forks
+
+          git checkout -B $BRANCH_NAME
+
+          # Check if the subtree pull made any changes
+          if git diff --quiet HEAD~1; then
+            echo "No actual changes from subtree pull."
+            exit 0
+          fi
+
+          git commit -am "Update forks via subtree"
+          git push -u origin $BRANCH_NAME
+
+          # Check if PR exists
+          if gh pr view $BRANCH_NAME --json number >/dev/null 2>&1; then
+            echo "PR already exists for branch $BRANCH_NAME. Just pushed new changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+            gh pr create \
+              --base main \
+              --head $BRANCH_NAME \
+              --title "Update forks via subtree" \
+              --body "Automated subtree update triggered via workflow"
+          fi
