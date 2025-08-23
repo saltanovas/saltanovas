@@ -27,7 +27,7 @@ jobs:
             master --squash
 
           git subtree add \
-            --prefix=spotify-readme \
+            --prefix=spotify-readme-test \
             https://github.com/novatorem/novatorem.git \
             master --squash
 
