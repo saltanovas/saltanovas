@@ -4,25 +4,6 @@
 - 🌱 Recently switched to Golang after a 3-year romance with Kotlin & Java  
 - ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵
 
-<table>
-  <tr>
-    <td align="center" valign="top">
-      <div><strong>🎧 Runtime Tracks</strong></div>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify">
-        <img src="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify?background_color=ffffff&border_color=ffffff" alt="Spotify Now Playing" width="400">
-      </picture>
-    </td>
-    <td align="center" valign="top">
-      <div style="line-height: 1;"><strong>😤 Ego Stats™</strong></div>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&bg_color=00000000&title_color=FF8C42&icon_color=FFB74D&text_color=D7CCC8&ring_color=FF8C42">
-        <img src="https://github-readme-stats-xi-black.vercel.app/api?username=saltanovas&show_icons=true&hide_title=true&hide_border=true&include_all_commits=true&bg_color=00000000&title_color=8D4004&icon_color=D2691E&text_color=5D4037&ring_color=8D4004" alt="GitHub Stats" width="400">
-      </picture>
-    </td>
-  </tr>
-</table>
-
 | 🎧 Runtime Tracks | 😤 Ego Stats™ |
 | ------------------|---------------|
 | <picture><source media="(prefers-color-scheme: dark)" srcset="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify"><img src="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify?background_color=ffffff&border_color=ffffff" alt="Spotify Now Playing" width="400"></picture> | <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&bg_color=00000000&title_color=FF8C42&icon_color=FFB74D&text_color=D7CCC8&ring_color=FF8C42"><img alt="" src="https://github-readme-stats-xi-black.vercel.app/api?username=saltanovas&show_icons=true&hide_title=true&hide_border=true&include_all_commits=true&bg_color=00000000&title_color=8D4004&icon_color=D2691E&text_color=5D4037&ring_color=8D4004"></picture> |
