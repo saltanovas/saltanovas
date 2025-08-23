@@ -48,8 +48,6 @@ jobs:
           fi
           
           git checkout -B $BRANCH_NAME
-
-          git commit -am "Update forks via subtree"
           git push -u origin $BRANCH_NAME
 
           # Check if PR exists
