@@ -1,4 +1,4 @@
-name: Update github-readme-stats subtree
+name: Sync Git Subtrees
 
 on:
   workflow_dispatch:
