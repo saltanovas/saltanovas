@@ -6,7 +6,7 @@
 
 | 🎧 Runtime Tracks | 😤 Ego Stats™ |
 | ------------------|---------------|
-| [<img src="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify-playing" alt="Spotify Now Playing" width="350" />](https://open.spotify.com/user/1176596437) |<img align="right" alt="" src="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&title_color=5551FF&icon_color=5551FF" /> |
+| [<img src="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify?background_color=ffffff&border_color=ffffff" alt="Spotify Now Playing" width="400" />](https://open.spotify.com/user/1176596437) |<img align="right" alt="" src="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&title_color=5551FF&icon_color=5551FF" /> |
 
 <hr>
 
