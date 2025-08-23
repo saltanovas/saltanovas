@@ -78,7 +78,6 @@ def get(url):
 
 def barGen(barCount):
     barCSS = ""
-    left = 1
     for i in range(1, barCount + 1):
         anim = random.randint(500, 1000)
         # below code generates random cubic-bezier values
@@ -87,11 +86,10 @@ def barGen(barCount):
         x2 = random.random()
         y2 = random.random()*2
         barCSS += (
-            ".bar:nth-child({})  {{ left: {}px; animation-duration: 15s, {}ms; animation-timing-function: ease, cubic-bezier({},{},{},{}); }}".format(
-                i, left, anim, x1, y1, x2, y2
+            ".bar:nth-child({})  {{ animation-duration: 15s, {}ms; animation-timing-function: ease, cubic-bezier({},{},{},{}); }}".format(
+                i, anim, x1, y1, x2, y2
             )
         )
-        left += 4
     return barCSS
 
 
