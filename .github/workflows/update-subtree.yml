@@ -42,7 +42,7 @@ jobs:
           BRANCH_NAME=update-forks
 
           # If nothing is changed, skip
-          if [ "COMMIT_BEFORE_PULL" = "COMMIT_AFTER_PULL" ]; then
+          if [ "$COMMIT_BEFORE_PULL" = "$COMMIT_AFTER_PULL" ]; then
             echo "No changes from subtree operations. Skipping PR."
             exit 0
           fi
