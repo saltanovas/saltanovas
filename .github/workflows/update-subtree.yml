@@ -21,6 +21,8 @@ jobs:
 
       - name: Pull subtree updates
         run: |
+          echo COMMIT_BEFORE_PULL=$(git rev-parse HEAD) >> $GITHUB_ENV
+          
           git subtree pull \
             --prefix=github-readme-stats \
             https://github.com/anuraghazra/github-readme-stats.git \
@@ -29,7 +31,9 @@ jobs:
           git subtree pull \
             --prefix=spotify-readme \
             https://github.com/novatorem/novatorem.git \
-            master --squash
+            main --squash
+          
+          echo COMMIT_AFTER_PULL=$(git rev-parse HEAD) >> $GITHUB_ENV
 
       - name: Create PR for subtree updates
         env:
@@ -37,15 +41,14 @@ jobs:
         run: |
           BRANCH_NAME=update-forks
 
-          git checkout -B $BRANCH_NAME
-
-          # Check if the subtree pull made any changes
-          if git diff --quiet && git diff --cached --quiet; then
-            echo "No actual changes from subtree pull."
+          # If nothing is changed, skip
+          if [ "COMMIT_BEFORE_PULL" = "COMMIT_AFTER_PULL" ]; then
+            echo "No changes from subtree operations. Skipping PR."
             exit 0
           fi
-
-          git commit -am "Update forks via subtree"
+          
+          # Commit is automatically created by the 'git subtree pull --squash' command
+          git checkout -B $BRANCH_NAME
           git push -u origin $BRANCH_NAME
 
           # Check if PR exists
