@@ -4,14 +4,12 @@
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
-                /* 7. SPOTIFY-STYLE HOVER EFFECTS */
                 a {
                     text-decoration: none;
                     transition: all 0.3s ease;
                     position: relative;
                     overflow: hidden;
-
-                    &::before {
+                    &amp;::before {
                         content: '';
                         position: absolute;
                         top: 0;
@@ -26,10 +24,10 @@
                         );
                         transition: left 0.5s;
                     }
-                    &:hover {
+                    &amp;:hover {
                         transform: translateY(-1px);
 
-                        &::before {
+                        &amp;::before {
                             left: 100%;
                         }
                     }
@@ -140,16 +138,16 @@
                     transform: translateZ(0) scaleY(0.2);
                     -webkit-transform: translateZ(0) scaleY(0.2);
 
-                    &:nth-child(odd) {
+                    &amp;:nth-child(odd) {
                         animation-duration: 0.8s;
                     }
 
-                    &:nth-child(even) {
+                    &amp;:nth-child(even) {
                         animation-duration: 1.1s;
                     }
 
                     /* Create more natural rhythm */
-                    &:nth-child(3n) {
+                    &amp;:nth-child(3n) {
                         animation-duration: 0.95s;
                     }
                 }
