@@ -3,16 +3,13 @@
     <div xmlns="http://www.w3.org/1999/xhtml" class="container">
 
       <style>
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
 
         .container {
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: start;
+          justify-content: flex-start;
           padding: 10px;
           gap: 10px;
           height: 100%;
@@ -24,75 +21,89 @@
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
         }
 
-        .art {
-          flex: 0 0 auto;
-        }
-
-        .cover {
-          width: 90px;
-          height: 90px;
-          border-radius: 5px;
-        }
+        .art { flex: 0 0 auto; }
+        .cover { width: 90px; height: 90px; border-radius: 5px; display: block; }
 
         .content {
           flex: 1;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: center;   /* center text + bars */
           justify-content: center;
-          overflow: hidden;
+          overflow: hidden;      /* needed for fade mask edges */
+        }
+
+        /* --- Gradient text + fade-out mask (Spotify-style) --- */
+        .song,
+        .artist {
+          position: relative;
+          display: inline-block;
+          max-width: 100%;
+          line-height: 1.2;
+          white-space: nowrap;
+          overflow: hidden;            /* ensure we clip for the fade */
+          text-align: center;
+
+          /* gradient text */
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background-size: 200% 100%;
+          background-position: 0% 50%;
+          animation: gradient 15s ease infinite;
         }
 
         .song {
           font-size: 20px;
-          font-weight: bold;
-          text-align: center;
+          font-weight: 700;
           margin-bottom: 4px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          background: linear-gradient(
-            125deg, 
+          background-image: linear-gradient(
+            125deg,
             rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
             rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
           );
-          background-size: 200% 100%;
-          background-position: 0% 50%;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-          animation: gradient 15s ease infinite;
         }
 
         .artist {
           font-size: 16px;
-          text-align: center;
-          color: #9f9f9f;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          background: linear-gradient(
-            -125deg, 
+          animation-duration: 12s; /* slightly different speed */
+          background-image: linear-gradient(
+            -125deg,
             rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
             rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
           );
-          background-size: 200% 100%;
-          background-position: 0% 50%;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-          animation: gradient 12s ease infinite;
         }
 
+        /* Fade-out overlay to the right; keeps gradient text AND visually fades like ellipsis */
+        .song::after,
+        .artist::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 2.25em;               /* width of fade zone */
+          height: 100%;
+          pointer-events: none;
+          background: linear-gradient(to right, rgba(0,0,0,0), #{{background_color}});
+        }
+
+        /* --- Bars row --- */
         #bars {
           display: flex;
           justify-content: center;
-          align-items: flex-end;
+          align-items: flex-end;  /* bottom-align bars */
           min-height: 35px;
-          gap: 1px;
+          /* If spacing causes misalignment on small renders, set gap to 0 */
+          gap: 0;
+          width: 100%;
         }
 
         .bar {
           width: 3px;
           height: 15px;
+          /* animate from bottom using scaleY so the baseline stays fixed */
+          transform-origin: bottom center;
+          animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in-out infinite alternate;
+
           background: linear-gradient(
             90deg,
             rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%,
@@ -102,30 +113,30 @@
           );
           background-size: 200% 100%;
           background-position: 0% 50%;
-          animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in infinite alternate;
         }
 
         @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+          0%   { background-position: 0%   50%; }
+          50%  { background-position: 100% 50%; }
+          100% { background-position: 0%   50%; }
         }
 
+        /* Scale from bottom instead of changing height */
         @keyframes pulse {
-          0% { height: 3px; opacity: 0.35; }
-          100% { height: 15px; opacity: 0.95; }
+          0%   { transform: scaleY(0.25); opacity: 0.35; }
+          100% { transform: scaleY(1.0);  opacity: 0.95; }
         }
 
         {{barCSS|safe}}
       </style>
 
-      <a class="art" href="{{songURI}}" target="_blank">
-        <img src="data:image/png;base64, {{image}}" class="cover" />
+      <a class="art" href="{{songURI}}" target="_blank" rel="noopener noreferrer">
+        <img src="data:image/png;base64, {{image}}" class="cover" alt="" />
       </a>
 
       <div class="content">
-        <a href="{{songURI}}" target="_blank"><div class="song">{{songName}}</div></a>
-        <a href="{{artistURI}}" target="_blank"><div class="artist">{{artistName}}</div></a>
+        <a href="{{songURI}}" target="_blank" rel="noopener noreferrer"><div class="song">{{songName}}</div></a>
+        <a href="{{artistURI}}" target="_blank" rel="noopener noreferrer"><div class="artist">{{artistName}}</div></a>
         <div id="bars">{{contentBar|safe}}</div>
       </div>
 
