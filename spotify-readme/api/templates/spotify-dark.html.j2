@@ -1,13 +1,18 @@
 <svg width="480" height="140" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml" class="container">
+
       <style>
-        a { text-decoration: none; color: inherit; }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
 
         .container {
           display: flex;
+          flex-direction: row;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: start;
           padding: 10px;
           gap: 10px;
           height: 100%;
@@ -19,8 +24,15 @@
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
         }
 
-        .art { flex: 0 0 auto; }
-        .cover { width: 90px; height: 90px; border-radius: 5px; display: block; }
+        .art {
+          flex: 0 0 auto;
+        }
+
+        .cover {
+          width: 90px;
+          height: 90px;
+          border-radius: 5px;
+        }
 
         .content {
           flex: 1;
@@ -31,71 +43,56 @@
           overflow: hidden;
         }
 
-        /* Headline/secondary containers (no gradient here) */
         .song {
           font-size: 20px;
-          font-weight: 700;
+          font-weight: bold;
           text-align: center;
           margin-bottom: 4px;
-        }
-        .artist {
-          font-size: 16px;
-          text-align: center;
-          margin-bottom: 6px;
-        }
-
-        /* Marquee shell */
-        .scroll-container {
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          height: 1.25em; /* one line height */
-        }
-
-        /* Moving text (gradient lives here) */
-        .scroll-text {
-          display: inline-block;
           white-space: nowrap;
-          padding-right: 2rem; /* space before reversing direction */
-          will-change: transform;
-          animation: scroll 12s linear infinite alternate;
-
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
+          text-overflow: ellipsis;
+          overflow: hidden;
           background: linear-gradient(
-            125deg,
+            125deg, 
             rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
             rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
           );
           background-size: 200% 100%;
           background-position: 0% 50%;
-          animation-name: gradient, scroll;               /* run both */
-          animation-duration: 15s, 12s;                   /* gradient, marquee */
-          animation-timing-function: ease, linear;
-          animation-iteration-count: infinite, infinite;
-          animation-direction: normal, alternate;
-        }
-        /* Slightly slower artist marquee for variety */
-        .artist .scroll-text {
-          animation-duration: 12s, 15s; /* gradient, marquee */
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          animation: gradient 15s ease infinite;
         }
 
-        /* Bars row */
+        .artist {
+          font-size: 16px;
+          text-align: center;
+          color: #9f9f9f;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background: linear-gradient(
+            -125deg, 
+            rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
+            rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
+          );
+          background-size: 200% 100%;
+          background-position: 0% 50%;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          animation: gradient 12s ease infinite;
+        }
+
         #bars {
           display: flex;
           justify-content: center;
-          align-items: flex-end;   /* bottom-align bars */
+          align-items: flex-end;
           min-height: 35px;
-          gap: 0;                  /* set to 0 if spacing misaligns at small widths */
-          width: 100%;
+          gap: 1px;
         }
 
         .bar {
           width: 3px;
           height: 15px;
-          transform-origin: bottom center;
-          animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in-out infinite alternate;
-
           background: linear-gradient(
             90deg,
             rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%,
@@ -103,48 +100,36 @@
             rgb({{ barPalette[2][0] }}, {{ barPalette[2][1] }}, {{ barPalette[2][2] }}) 66%,
             rgb({{ barPalette[3][0] }}, {{ barPalette[3][1] }}, {{ barPalette[3][2] }}) 100%
           );
+          background-attachment: fixed;
           background-size: 200% 100%;
-          background-position: 0% 50%;
+          background-position: 0% 50% !important;
+          animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in infinite alternate;
         }
 
-        /* Animations */
         @keyframes gradient {
-          0%   { background-position: 0%   50%; }
-          50%  { background-position: 100% 50%; }
-          100% { background-position: 0%   50%; }
-        }
-        @keyframes pulse {
-          0%   { transform: scaleY(0.25); opacity: 0.35; }
-          100% { transform: scaleY(1.0);  opacity: 0.95; }
-        }
-        @keyframes scroll {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); } /* try -100% for a full pass */
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
 
-        /* Per-bar timing curves/delays injected from backend */
+        @keyframes pulse {
+          0% { height: 3px; opacity: 0.35; }
+          100% { height: 15px; opacity: 0.95; }
+        }
+
         {{barCSS|safe}}
       </style>
 
-      <a class="art" href="{{songURI}}" target="_blank" rel="noopener noreferrer">
-        <img src="data:image/png;base64, {{image}}" class="cover" alt="" />
+      <a class="art" href="{{songURI}}" target="_blank">
+        <img src="data:image/png;base64, {{image}}" class="cover" />
       </a>
 
       <div class="content">
-        <a href="{{songURI}}" target="_blank" rel="noopener noreferrer">
-          <div class="song scroll-container">
-            <span class="scroll-text">{{songName}}</span>
-          </div>
-        </a>
-
-        <a href="{{artistURI}}" target="_blank" rel="noopener noreferrer">
-          <div class="artist scroll-container">
-            <span class="scroll-text">{{artistName}}</span>
-          </div>
-        </a>
-
+        <a href="{{songURI}}" target="_blank"><div class="song">{{songName}}</div></a>
+        <a href="{{artistURI}}" target="_blank"><div class="artist">{{artistName}}</div></a>
         <div id="bars">{{contentBar|safe}}</div>
       </div>
+
     </div>
   </foreignObject>
 </svg>
