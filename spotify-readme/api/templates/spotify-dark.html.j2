@@ -103,28 +103,25 @@
                 }
 
                 #bars {
-                    bottom: 23px;
-                    position: absolute;
-                    margin: -20px 0 0 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    gap: 3px;
+                    margin-top: 10px;
                 }
 
                 .bar {
                     width: 3px;
-                    bottom: 1px;
                     height: 15px;
-                    position: absolute;
-                    background: #5433FF;  /* fallback for old browsers */
-                    background: -webkit-linear-gradient(to right, #20BDFF, #ab66ff, #5433FF, #20BDFF);  /* Chrome 10-25, Safari 5.1-6 */
                     background: linear-gradient(
-                                    90deg, 
-                                    rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%, 
-                                    rgb({{ barPalette[1][0] }}, {{ barPalette[1][1] }}, {{ barPalette[1][2] }}) 33%, 
-                                    rgb({{ barPalette[2][0] }}, {{ barPalette[2][1] }}, {{ barPalette[2][2] }}) 66%, 
-                                    rgb({{ barPalette[3][0] }}, {{ barPalette[3][1] }}, {{ barPalette[3][2] }}) 100%
-                                );
+                        90deg,
+                        rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%,
+                        rgb({{ barPalette[1][0] }}, {{ barPalette[1][1] }}, {{ barPalette[1][2] }}) 33%,
+                        rgb({{ barPalette[2][0] }}, {{ barPalette[2][1] }}, {{ barPalette[2][2] }}) 66%,
+                        rgb({{ barPalette[3][0] }}, {{ barPalette[3][1] }}, {{ barPalette[3][2] }}) 100%
+                    );
                     background-size: 200% 100%;
                     background-position: 0% 50%;
-                    background-attachment: fixed;
                     animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in infinite alternate;
                 }
                 
