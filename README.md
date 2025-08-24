@@ -6,7 +6,7 @@
 
 | 🎧 Runtime Tracks | 😤 Ego Stats™ |
 | ------------------|---------------|
-| [<img src="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify?background_color=ffffff&border_color=ffffff" alt="Spotify Now Playing" width="400" />](https://open.spotify.com/user/1176596437) |<img align="right" alt="" src="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&title_color=5551FF&icon_color=5551FF" /> |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify"><img src="https://spotify-now-playing-fawn-ten.vercel.app/api/spotify?background_color=ffffff&border_color=ffffff" alt="Spotify Now Playing" width="400"></picture> | <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-kow05wghb-saltanovas.vercel.app/api?username=saltanovas&show_icons=true&hide_border=true&bg_color=00000000&title_color=FF8C42&icon_color=FFB74D&text_color=D7CCC8&ring_color=FF8C42"><img alt="" src="https://github-readme-stats-xi-black.vercel.app/api?username=saltanovas&show_icons=true&hide_title=true&hide_border=true&include_all_commits=true&bg_color=00000000&title_color=8D4004&icon_color=D2691E&text_color=5D4037&ring_color=8D4004"></picture> |
 
 <hr>
 
