@@ -79,15 +79,17 @@ def get(url):
 def barGen(barCount):
     barCSS = ""
     for i in range(1, barCount + 1):
-        anim = random.randint(500, 1000)
-        x1 = random.random()
-        y1 = random.random() * 2
-        x2 = random.random()
-        y2 = random.random() * 2
+        anim_duration = random.randint(500, 1000)
+        x1 = round(random.random(), 2)
+        y1 = round(random.random() * 2, 2)
+        x2 = round(random.random(), 2)
+        y2 = round(random.random() * 2, 2)
+
         barCSS += (
-            ".bar:nth-child({})  {{ animation-duration: 15s, {}ms; animation-timing-function: ease, cubic-bezier({},{},{},{}); }}\n".format(
-                i, anim, x1, y1, x2, y2
-            )
+            ".bar:nth-child({}) {{ "
+            "animation-duration: {}ms; "
+            "animation-timing-function: cubic-bezier({}, {}, {}, {}); "
+            "}}\n".format(i, anim_duration, x1, y1, x2, y2)
         )
     return barCSS
 
