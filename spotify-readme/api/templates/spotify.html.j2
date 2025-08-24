@@ -4,6 +4,16 @@
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
+                    a {
+                        text-decoration: none;
+                    }
+
+                    div {
+                        font-size: 1em;
+                        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+                            sans-serif, Apple Color Emoji, Segoe UI Emoji;
+                    }
+
                     /* Layout Utilities */
                     .d-flex {
                         display: flex;
@@ -25,14 +35,6 @@
                         margin-right: 1rem;
                     }
 
-                    .ml-3 {
-                        margin-left: 2.5rem;
-                    }
-
-                    .ms-auto {
-                        margin-left: auto;
-                    }
-
                     .text-muted-light {
                         color: #6c757d;
                     }
@@ -42,7 +44,7 @@
                     }
 
                     .text-dark {
-                    color: #212529;
+                        color: #212529;
                     }
 
                     .text-white {
@@ -69,6 +71,9 @@
                     /* Custom */
                     .container {
                         width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        /* Required for compatibility with iOS */
                         transform: translateZ(0);
                         -webkit-transform: translateZ(0);
                     }
@@ -88,29 +93,32 @@
 
                     .bar {
                         width: 3px;
+                        height: 15px;
                         animation: pulse 0.9s ease-in-out infinite alternate;
                         border-radius: 3px;
+                        transform-origin: bottom;
+                        -webkit-transform-origin: bottom;
+
+                        /* Start with the scaled-down state */
+                        transform: translateZ(0) scaleY(0.2);
+                        -webkit-transform: translateZ(0) scaleY(0.2);
                     }
 
-                    a {
-                        text-decoration: none;
-                    }
-
-                    div {
-                        font-size: 1em;
-                        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-                            sans-serif, Apple Color Emoji, Segoe UI Emoji;
+                    .ellipsis {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        max-width: 300px;
+                        display: block;
                     }
 
                     @keyframes gradient {
                         0% {
                             background-position: 0% 50%;
                         }
-
                         50% {
                             background-position: 100% 50%;
                         }
-
                         100% {
                             background-position: 0% 50%;
                         }
@@ -118,22 +126,13 @@
 
                     @keyframes pulse {
                         0% {
-                            height: 3px;
+                            transform: translateZ(0) scaleY(0.2);
                             opacity: .35;
                         }
-
                         100% {
-                            height: 15px;
+                            transform: translateZ(0) scaleY(1);
                             opacity: 0.95;
                         }
-                    }
-
-                    .ellipsis {
-                      overflow: hidden;
-                      text-overflow: ellipsis;
-                      white-space: nowrap;
-                      max-width: 300px;
-                      display: block;
                     }
 
                     {{ barCSS|safe }}
