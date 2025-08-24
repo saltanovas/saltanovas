@@ -3,13 +3,16 @@
     <div xmlns="http://www.w3.org/1999/xhtml" class="container">
 
       <style>
-        a { text-decoration: none; color: inherit; }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
 
         .container {
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: start;
           padding: 10px;
           gap: 10px;
           height: 100%;
@@ -21,89 +24,75 @@
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
         }
 
-        .art { flex: 0 0 auto; }
-        .cover { width: 90px; height: 90px; border-radius: 5px; display: block; }
+        .art {
+          flex: 0 0 auto;
+        }
+
+        .cover {
+          width: 90px;
+          height: 90px;
+          border-radius: 5px;
+        }
 
         .content {
           flex: 1;
           display: flex;
           flex-direction: column;
-          align-items: center;   /* center text + bars */
+          align-items: center;
           justify-content: center;
-          overflow: hidden;      /* needed for fade mask edges */
-        }
-
-        /* --- Gradient text + fade-out mask (Spotify-style) --- */
-        .song,
-        .artist {
-          position: relative;
-          display: inline-block;
-          max-width: 100%;
-          line-height: 1.2;
-          white-space: nowrap;
-          overflow: hidden;            /* ensure we clip for the fade */
-          text-align: center;
-
-          /* gradient text */
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-          background-size: 200% 100%;
-          background-position: 0% 50%;
-          animation: gradient 15s ease infinite;
+          overflow: hidden;
         }
 
         .song {
           font-size: 20px;
-          font-weight: 700;
+          font-weight: bold;
+          text-align: center;
           margin-bottom: 4px;
-          background-image: linear-gradient(
-            125deg,
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          background: linear-gradient(
+            125deg, 
             rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
             rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
           );
+          background-size: 200% 100%;
+          background-position: 0% 50%;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          animation: gradient 15s ease infinite;
         }
 
         .artist {
           font-size: 16px;
-          animation-duration: 12s; /* slightly different speed */
-          background-image: linear-gradient(
-            -125deg,
+          text-align: center;
+          color: #9f9f9f;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background: linear-gradient(
+            -125deg, 
             rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
             rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
           );
+          background-size: 200% 100%;
+          background-position: 0% 50%;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          animation: gradient 12s ease infinite;
         }
 
-        /* Fade-out overlay to the right; keeps gradient text AND visually fades like ellipsis */
-        .song::after,
-        .artist::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 2.25em;               /* width of fade zone */
-          height: 100%;
-          pointer-events: none;
-          background: linear-gradient(to right, rgba(0,0,0,0), #{{background_color}});
-        }
-
-        /* --- Bars row --- */
         #bars {
           display: flex;
           justify-content: center;
-          align-items: flex-end;  /* bottom-align bars */
+          align-items: flex-end;
           min-height: 35px;
-          /* If spacing causes misalignment on small renders, set gap to 0 */
-          gap: 0;
-          width: 100%;
+          gap: 1px;
         }
 
         .bar {
           width: 3px;
           height: 15px;
-          /* animate from bottom using scaleY so the baseline stays fixed */
-          transform-origin: bottom center;
-          animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in-out infinite alternate;
-
           background: linear-gradient(
             90deg,
             rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%,
@@ -113,30 +102,61 @@
           );
           background-size: 200% 100%;
           background-position: 0% 50%;
+          animation: gradient 15s ease infinite, pulse 0ms -800ms ease-in infinite alternate;
         }
 
         @keyframes gradient {
-          0%   { background-position: 0%   50%; }
-          50%  { background-position: 100% 50%; }
-          100% { background-position: 0%   50%; }
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
 
-        /* Scale from bottom instead of changing height */
         @keyframes pulse {
-          0%   { transform: scaleY(0.25); opacity: 0.35; }
-          100% { transform: scaleY(1.0);  opacity: 0.95; }
+          0% { height: 3px; opacity: 0.35; }
+          100% { height: 15px; opacity: 0.95; }
         }
 
         {{barCSS|safe}}
+
+        .scroll-container {
+          position: relative;
+          overflow: hidden;
+          width: 100%;            /* restrict width */
+          height: 1.2em;          /* fit single line of text */
+        }
+        
+        .scroll-text {
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background: linear-gradient(
+            125deg,
+            rgb({{ songPalette[0][0] }}, {{ songPalette[0][1] }}, {{ songPalette[0][2] }}),
+            rgb({{ songPalette[1][0] }}, {{ songPalette[1][1] }}, {{ songPalette[1][2] }})
+          );
+          background-size: 200% 100%;
+          background-position: 0% 50%;
+        }
+
+        @keyframes scroll {
+          0%   { transform: translateX(0%); }
+          100% { transform: translateX(-50%); } /* adjust based on text length */
+        }
       </style>
 
-      <a class="art" href="{{songURI}}" target="_blank" rel="noopener noreferrer">
-        <img src="data:image/png;base64, {{image}}" class="cover" alt="" />
+      <a class="art" href="{{songURI}}" target="_blank">
+        <img src="data:image/png;base64, {{image}}" class="cover" />
       </a>
 
       <div class="content">
-        <a href="{{songURI}}" target="_blank" rel="noopener noreferrer"><div class="song">{{songName}}</div></a>
-        <a href="{{artistURI}}" target="_blank" rel="noopener noreferrer"><div class="artist">{{artistName}}</div></a>
+        <a href="{{songURI}}" target="_blank">
+          <div class="song scroll-container">
+            <span class="scroll-text">{{songName}}</span>
+          </div>
+        </a>
+        <a href="{{artistURI}}" target="_blank">        
+          <div class="artist scroll-container">
+            <span class="scroll-text">{{artistName}}</span>
+          </div>
         <div id="bars">{{contentBar|safe}}</div>
       </div>
 
