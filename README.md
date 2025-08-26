@@ -1,11 +1,11 @@
-## Aloha, I'm Aivaras & I 💛 code. <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width="200">
+## Aloha, I'm Aivaras & I 💛 code. <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0f185f26-35f8-4d7a-8768-bc52350e5e58"><img src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" width="200" align="right"></picture>
 - 👨🏻‍💻 On a journey to write code that helps, not just runs
 - 💵 4 years of experience in financial services
 - 🌱 Recently switched to Golang after a 3-year romance with Kotlin & Java  
 - ⚡ Fun fact: I don’t trust people who don’t write SQL queries in uppercase 😵
 
-|                                                                                                                                  🎧 Runtime Tracks                                                                                                                                   | 😤 Ego Stats™ |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------:|
+| 🎧 Runtime Tracks | 😤 Ego Stats™ |
+|:-----------------:|:------------:|
 | <picture><source media="(prefers-color-scheme: dark)" srcset="https://saltanovas-spotify.vercel.app/api/spotify?theme=dark"><img src="https://saltanovas-spotify.vercel.app/api/spotify?theme=light" alt="Spotify Now Playing" width="450"></picture> | <picture><source media="(prefers-color-scheme: dark)" srcset="https://saltanovas-github-stats.vercel.app/api?username=saltanovas&show_icons=true&hide_title=true&hide_border=true&hide=contribs&bg_color=00000000&title_color=FF8C42&icon_color=FFB74D&text_color=D7CCC8&ring_color=FF8C42"><img alt="" src="https://saltanovas-github-stats.vercel.app/api?username=saltanovas&show_icons=true&hide_title=true&hide_border=true&hide=contribs&include_all_commits=true&bg_color=00000000&title_color=8D4004&icon_color=D2691E&text_color=5D4037&ring_color=8D4004"></picture> |
 
 <hr>
