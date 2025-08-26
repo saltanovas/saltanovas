@@ -26,12 +26,12 @@ jobs:
           echo COMMIT_BEFORE_PULL=$(git rev-parse HEAD) >> $GITHUB_ENV
           
           git subtree pull \
-            --prefix=github-stats \
+            --prefix=github-readme-stats \
             https://github.com/anuraghazra/github-readme-stats.git \
             master --squash
 
           git subtree pull \
-            --prefix=spotify \
+            --prefix=spotify-readme \
             https://github.com/novatorem/novatorem.git \
             main --squash
           
