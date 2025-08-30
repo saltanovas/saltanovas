@@ -6,31 +6,6 @@
             <style>
                 a {
                     text-decoration: none;
-                    transition: all 0.3s ease;
-                    position: relative;
-                    overflow: hidden;
-                    &amp;::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: -100%;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(
-                            90deg,
-                            transparent,
-                            rgba(255, 255, 255, 0.1),
-                            transparent
-                        );
-                        transition: left 0.5s;
-                    }
-                    &amp;:hover {
-                        transform: translateY(-1px);
-
-                        &amp;::before {
-                            left: 100%;
-                        }
-                    }
                 }
 
                 div {
@@ -72,7 +47,6 @@
                     font-size: 0.85em;
                     letter-spacing: 0.01em;
                     line-height: 1.3;
-                    opacity: 0.8;
                 }
 
                 .text-dark {
@@ -108,9 +82,14 @@
                     width: 100%;
                     display: flex;
                     justify-content: center;
-                    /* Required for compatibility with iOS */
-                    transform: translateZ(0);
-                    -webkit-transform: translateZ(0);
+                }
+
+                .ellipsis {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 300px;
+                    display: block;
                 }
 
                 .cover {
@@ -128,62 +107,45 @@
 
                 .bar {
                     width: 3px;
-                    height: 15px;
-                    animation: pulse 0.9s ease-in-out infinite alternate;
+                    height: 3px;
                     border-radius: 3px;
-                    transform-origin: bottom;
-                    -webkit-transform-origin: bottom;
 
-                    /* Start with the scaled-down state */
-                    transform: translateZ(0) scaleY(0.2);
-                    -webkit-transform: translateZ(0) scaleY(0.2);
+                    animation-name: pulse;
+                    animation-duration: 0.9s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
 
-                    &amp;:nth-child(odd) {
-                        animation-duration: 0.8s;
-                    }
-
-                    &amp;:nth-child(even) {
-                        animation-duration: 1.1s;
-                    }
-
-                    /* Create more natural rhythm */
-                    &amp;:nth-child(3n) {
-                        animation-duration: 0.95s;
-                    }
-                }
-
-                .ellipsis {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    max-width: 300px;
-                    display: block;
-                }
-
-                @keyframes gradient {
-                    0% {
-                        background-position: 0% 50%;
-                    }
-                    50% {
-                        background-position: 100% 50%;
-                    }
-                    100% {
-                        background-position: 0% 50%;
-                    }
+                    background: linear-gradient(90deg,
+                                    rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}) 0%,
+                                    rgb({{ barPalette[1][0] }}, {{ barPalette[1][1] }}, {{ barPalette[1][2] }}) 33%,
+                                    rgb({{ barPalette[2][0] }}, {{ barPalette[2][1] }}, {{ barPalette[2][2] }}) 66%,
+                                    rgb({{ barPalette[3][0] }}, {{ barPalette[3][1] }}, {{ barPalette[3][2] }}) 100%
+                    );
                 }
 
                 @keyframes pulse {
                     0% {
-                        transform: translateZ(0) scaleY(0.2);
-                        opacity: .35;
+                        height: 3px;
                     }
                     100% {
-                        transform: translateZ(0) scaleY(1);
-                        opacity: 0.95;
+                        height: 15px;
                     }
                 }
 
-                {{ barCSS|safe }}
+                {% for i in range(1, barCount + 1) %}
+                  .bar:nth-child({{ i }}) {
+                    background-size: calc({{ barCount }} * 100%) 100%;
+                    background-position: calc({{ i }} / {{ barCount }} * 100%) 0;
+                    animation-duration: {{ range(500, 1000) | random }}ms;
+                    animation-timing-function: cubic-bezier(
+                      {{ ((range(0, 100) | random) / 100) | round(2) }},
+                      {{ ((range(0, 200) | random) / 100) | round(2) }},
+                      {{ ((range(0, 100) | random) / 100) | round(2) }},
+                      {{ ((range(0, 200) | random) / 100) | round(2) }}
+                    );
+                  }
+                {%- endfor %}
             </style>
             <div class="d-flex align-items-center">
                 <!-- Cover Image -->
@@ -200,14 +162,9 @@
                     <a href="{{ artistURI }}" class="text-decoration-none">
                         <div class="{{ 'text-muted-dark' if theme == 'dark' else 'text-muted-light' }} ellipsis">{{ artistName }}</div>
                     </a>
-                    {%- set totalBars = 60 -%}
-                    <div id="bars">
-                        {%- for i in range(totalBars) %}
-                            <div class="bar" style="animation-delay: {{ loop.index0 * 25 }}ms;
-                                    background: linear-gradient(90deg, rgb({{ barPalette[0][0] }}, {{ barPalette[0][1] }}, {{ barPalette[0][2] }}), rgb({{ barPalette[1][0] }}, {{ barPalette[1][1] }}, {{ barPalette[1][2] }}), rgb({{ barPalette[2][0] }}, {{ barPalette[2][1] }}, {{ barPalette[2][2] }}), rgb({{ barPalette[3][0] }}, {{ barPalette[3][1] }}, {{ barPalette[3][2] }}) );
-                                    background-size: {{ totalBars * 100 }}% 100%;
-                                    background-position: {{ (loop.index0 / totalBars) * 100 }}% 0;">
-                            </div>
+                        <div id="bars">
+                        {%- for i in range(barCount) %}
+                            <div class="bar"></div>
                         {%- endfor %}
                     </div>
                 </div>
