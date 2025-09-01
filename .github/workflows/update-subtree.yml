@@ -54,7 +54,7 @@ jobs:
           git push -u origin $BRANCH_NAME
 
           # Check if PR exists
-          if gh pr view $BRANCH_NAME --json number >/dev/null 2>&1; then
+          if gh pr list --head update-forks --state open --json number | grep -q '[0-9]'; then
             echo "PR already exists for branch $BRANCH_NAME. Just pushed new changes."
           else
             gh pr create \
