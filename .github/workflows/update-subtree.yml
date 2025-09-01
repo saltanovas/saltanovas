@@ -51,7 +51,7 @@ jobs:
           
           # Commit is automatically created by the 'git subtree pull --squash' command
           git checkout -B $BRANCH_NAME
-          git push -u origin $BRANCH_NAME
+          git push -u origin $BRANCH_NAME --force
 
           # Check if PR exists
           if gh pr list --head update-forks --state open --json number | grep -q '[0-9]'; then
