@@ -1,4 +1,12 @@
- {
+{
+  "functions": {
+    "src/spotify.py": {
+      "runtime": "python3.11"
+    },
+    "src/github.py": {
+      "runtime": "python3.11"
+    }
+  },
   "redirects": [
     {
       "source": "/",

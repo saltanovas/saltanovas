@@ -5,6 +5,9 @@
         "postdeploy": "gunicorn --workers=1 api.spotify:app"
     },
     "env": {
+        "REDIS_URL": {
+          "required": true
+        },
         "SPOTIFY_CLIENT_ID": {
             "required": true
         },
