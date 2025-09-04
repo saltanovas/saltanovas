@@ -72,26 +72,6 @@ def get(url):
         return response.json()
 
 
-def barGen(barCount):
-    barCSS = ""
-    for i in range(1, barCount + 1):
-        anim_duration = random.randint(500, 1000)
-        x1 = round(random.random(), 2)
-        y1 = round(random.random() * 2, 2)
-        x2 = round(random.random(), 2)
-        y2 = round(random.random() * 2, 2)
-
-        barCSS += (
-            f".bar:nth-child({i}) {{\n"
-            f"    background-size: calc({BAR_COUNT} * 100%) 100%;\n"
-            f"    background-position: calc(({i} / {BAR_COUNT}) * 100%) 0%;\n"
-            f"    animation-duration: {anim_duration}ms;\n"
-            f"    animation-timing-function: cubic-bezier({x1}, {y1}, {x2}, {y2});\n"
-            f"}}\n"
-        )
-    return barCSS
-
-
 def gradientGen(albumArtURL, color_count):
     colortheif = ColorThief(BytesIO(requests.get(albumArtURL).content))
     palette = colortheif.get_palette(color_count)
@@ -106,7 +86,6 @@ def getTemplate():
 
 def loadImageB64(url):
     response = requests.get(url)
-
     return b64encode(response.content).decode("ascii")
 
 
@@ -129,8 +108,6 @@ def makeSVG(data, theme):
         songPalette = gradientGen(item["album"]["images"][1]["url"], 2)
 
     dataDict = {
-        "contentBar": "".join(["<div class='bar'></div>" for _ in range(BAR_COUNT)]),
-        "barCSS": barGen(BAR_COUNT),
         "barCount": BAR_COUNT,
         "artistName": item["artists"][0]["name"].replace("&", "&amp;"),
         "songName": item["name"].replace("&", "&amp;"),
