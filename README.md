@@ -8,7 +8,10 @@
 |:-----------------:|:------------:|
 | <picture><source media="(prefers-color-scheme: dark)" srcset="https://saltanovas-spotify.vercel.app/api/spotify?theme=dark"><img src="https://saltanovas-spotify.vercel.app/api/spotify?theme=light" alt="Spotify Now Playing" width="450"></picture> | <picture><source media="(prefers-color-scheme: dark)" srcset="https://saltanovas-github-stats.vercel.app/api?username=saltanovas&show_icons=true&hide_title=true&hide_border=true&hide=contribs&bg_color=00000000&title_color=FF8C42&icon_color=FFB74D&text_color=D7CCC8&ring_color=FF8C42"><img alt="" src="https://saltanovas-github-stats.vercel.app/api?username=saltanovas&show_icons=true&hide_title=true&hide_border=true&hide=contribs&include_all_commits=true&bg_color=00000000&title_color=8D4004&icon_color=D2691E&text_color=5D4037&ring_color=8D4004"></picture> |
 
-<hr>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/70ed540d-19da-447d-b12f-a4d77b29f679" align="center" />
+</p>
+
 
 <p align="center">
   <i>Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live <br> - John F. Woods, September 1991</i>
