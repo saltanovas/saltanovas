@@ -26,7 +26,7 @@
   }$$
 </h3>
 <p align="center">
-  <img height="420" width="420" src="https://skillicons.dev/icons?theme=light&i=java,kotlin,spring,ktor,go,mysql,postgres,aws,docker" />
+  <img src="https://skillicons.dev/icons?theme=light&i=java,kotlin,spring,ktor,go,mysql,postgres,aws,docker" />
 </p>
 
 <hr>
@@ -35,8 +35,8 @@
   <i>Explore my repositories and let's get in touch ✨</i>
 </p>
 <p align="center">
-  <a href="https://www.linkedin.com/in/aivaras-%C5%A1altanovas-b813371a3/"><img height="40" width="40" src="https://skillicons.dev/icons?theme=light&i=linkedin" /></a>&nbsp;
-  <a href="mailto:zumbass@gmail.com"><img height="40" width="40" src="https://skillicons.dev/icons?theme=light&i=gmail" /></a>&nbsp;
+  <a href="https://www.linkedin.com/in/aivaras-%C5%A1altanovas-b813371a3/"><img src="https://skillicons.dev/icons?theme=light&i=linkedin" /></a>&nbsp;
+  <a href="mailto:zumbass@gmail.com"><img src="https://skillicons.dev/icons?theme=light&i=gmail" /></a>
 </p>
 
 <hr>
